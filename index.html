@@ -3,21 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="font/flaticon.css">
 </head>
 <body>
 
 	<div class="start">
-		<h1>Aye, ye scurvy dog! Let yer ol bartender here make a drink to yer likin'!</h1>
-		<button id="begin">Arrrrr, matey!</button>
+		<h1>Aye, ye scurvy dog! Let yer ol' bartender here make a drink to yer likin'!</h1>
+		<i class="flaticon-death"></i>
 	</div>
 
 	<div class="questions">
 		<h1></h1>
-		<button class="yes">Aye!</button>
-		<button class="no">Blargh!</button>
+		<div class="options">
+			<i class="flaticon-pirate-happy"></i>
+			<i class="flaticon-pirate-sad"></i>
+		</div>
 	</div>
 
-	<div class="drink"></div>
+	<div class="drink">
+		<h1>Ye be needin' t' swill a pint or two! Here's yer concoction, matey!</h1>
+		<h2>Add a <span id="ingredients"></span> to yer mixins for a perfect drink!</h2>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>

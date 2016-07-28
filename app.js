@@ -11,19 +11,22 @@ $(".drink").hide();
 
 
 // show first question on click of start button
-$("#begin").click(function() {
+$(".flaticon-death").click(function() {
 	$(".start").hide();
 	$(".questions").show();
-	$(".questions h1").text(questions[0]);
 })
 
-var currQuestion = 1;
 
-$(".questions button").click(function() {
+// show questions, when finished show drink
+var currQuestion = 0;
+
+$("i").click(function() {
+	if (currQuestion === 5) {
+		showDrink();
+	}
+	else {
 	$(".questions h1").text(questions[currQuestion]);
 	currQuestion++;
-	if (currQuestion === 4) {
-		Drink();
 	}
 })
 
@@ -40,11 +43,11 @@ var questions = [
 
 // available ingredients in the pantry
 var ingredients = {
-	strong : ['Glug of rum', 'Slug of whisky', 'Splash of gin'],
-	salty : ['Olive on a stick', 'Salt-dusted rim', 'Rasher of bacon'],
-	bitter : ['Shake of bitters', 'Splash of tonic', 'Twist of lemon peel'],
-	sweet : ['Sugar cube', 'Spoonful of honey', 'Splash of cola'],
-	fruity : ['Slice of orange', 'Dash of cassis', 'Cherry on top'],
+	strong : ['glug of rum', 'slug of whisky', 'splash of gin'],
+	salty : ['olive on a stick', 'salt-dusted rim', 'rasher of bacon'],
+	bitter : ['shake of bitters', 'splash of tonic', 'twist of lemon peel'],
+	sweet : ['sugar cube', 'spoonful of honey', 'splash of cola'],
+	fruity : ['slice of orange', 'dash of cassis', 'cherry on top'],
 }
 
 
@@ -55,21 +58,14 @@ var Drink = function(ingredients) {
 	this.bitter = ingredients.bitter;
 	this.sweet = ingredients.sweet;
 	this.fruity = ingredients.fruity;
-	showDrink();
-}
-
-
-// show drink div and generated drink
-var showDrink = function() {
-	$(".drink").show();
-}
+};
 
 
 // generate random number between 0 and 2 to determine item in ingredients array to be selected
 var selection = function() {
 	var num = Math.floor((Math.random() * 3));
 	return num;
-}
+};
 
 
 // build customer's drink based on preferences
@@ -80,6 +76,15 @@ var customerDrink = new Drink ({
 	sweet : ingredients.sweet[selection()],
 	fruity : ingredients.fruity[selection()]
 });
+
+
+// show drink div and generated drink
+var showDrink = function() {
+	$(".questions").hide();
+	$(".drink").show();
+	$("#ingredients").append(customerDrink);
+	console.log(customerDrink);
+};
 
 
 });

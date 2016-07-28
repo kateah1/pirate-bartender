@@ -1,0 +1,41 @@
+body {
+	background-image: url("pirate-drinks.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.start {
+	text-align: center;
+}
+
+.start h1, .questions h1, .drink {
+	text-align: center;
+	background-color: #fff;
+	width: 800px;
+	margin: 20px auto;
+	opacity: .3;
+	border-radius: 5px;
+	padding: 10px;
+	letter-spacing: 1px; 
+}
+
+.flaticon-death, .flaticon-pirate-happy, .flaticon-pirate-sad {
+	color: #fff;
+}
+
+.flaticon-death:hover, .flaticon-pirate-happy:hover, .flaticon-pirate-sad:hover {
+	cursor: pointer;
+	color: #820707;
+}
+
+.options {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.drink {
+	color: #820707;
+	opacity: .5;
+}
+
