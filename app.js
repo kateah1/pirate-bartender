@@ -19,12 +19,23 @@ $(".flaticon-death").click(function() {
 
 // show questions, when finished show drink
 var currQuestion = 0;
+var arr = [];
 
 $("i").click(function() {
 	if (currQuestion === 5) {
 		showDrink();
 	}
 	else {
+		/*if ($("i").val("yes")) {
+			var userPreference = function () {
+				arr.push("true");
+			}
+		}
+		else {
+			var userPreference = function () {
+				arr.push("false");
+			}
+		}*/
 	$(".questions h1").text(questions[currQuestion]);
 	currQuestion++;
 	}
@@ -70,11 +81,11 @@ var selection = function() {
 
 // build customer's drink based on preferences
 var customerDrink = new Drink ({
-	strong : ingredients.strong[selection()],
-	salty : ingredients.salty[selection()],
-	bitter : ingredients.bitter[selection()],
-	sweet : ingredients.sweet[selection()],
-	fruity : ingredients.fruity[selection()]
+	strong : /*(arr[0] === "true") ? */ingredients.strong[selection()],
+	salty : /*(arr[1] === "true") ? */ingredients.salty[selection()],
+	bitter : /*(arr[2] === "true") ? */ingredients.bitter[selection()],
+	sweet : /*(arr[3] === "true") ? */ingredients.sweet[selection()],
+	fruity : /*(arr[4] === "true") ? */ingredients.fruity[selection()]
 });
 
 
@@ -82,7 +93,7 @@ var customerDrink = new Drink ({
 var showDrink = function() {
 	$(".questions").hide();
 	$(".drink").show();
-	$("#ingredients").append(customerDrink);
+	$("#ingredients").append(customerDrink.strong + ", " + customerDrink.salty + ", " + customerDrink.bitter + ", " + customerDrink.sweet + ", and a " + customerDrink.fruity);
 	console.log(customerDrink);
 };
 

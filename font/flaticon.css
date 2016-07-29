@@ -29,5 +29,5 @@ font-style: normal;
 }
 
 .flaticon-death:before { content: "\f100"; }
-.flaticon-pirate-happy:before { content: "\f101"; }
+.flaticon-pirate-happy:before { content: "\f101"; margin-right: 150px; }
 .flaticon-pirate-sad:before { content: "\f102"; }
