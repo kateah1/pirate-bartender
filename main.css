@@ -8,34 +8,58 @@ body {
 	text-align: center;
 }
 
-.start h1, .questions h1, .drink {
+.start h1, .questions form ul, .drink {
 	text-align: center;
 	background-color: #fff;
 	width: 800px;
 	margin: 20px auto;
-	opacity: .3;
+	opacity: .4;
 	border-radius: 5px;
-	padding: 10px;
 	letter-spacing: 1px; 
 }
 
-.flaticon-death, .flaticon-pirate-happy, .flaticon-pirate-sad {
+.start h1 {
+	font-size: 2.5em;
+	padding: 10px;
+}
+
+.questions form ul {
+	padding: 30px;
+	font-size: 2em;
+} 
+
+.drink {
+	padding: 20px;
+	line-height: 40px;
+}
+.drink h1 {
+	font-size: 2.5em;
+}
+
+.questions form ul > li {
+	list-style: none;
+	margin: 20px;
+}
+
+.flaticon-death {
 	color: #fff;
 }
 
-.flaticon-death:hover, .flaticon-pirate-happy:hover, .flaticon-pirate-sad:hover {
+.flaticon-death:hover {
 	cursor: pointer;
 	color: #820707;
-}
-
-.options {
-	width: 800px;
-	margin: 0 auto;
-	text-align: center;
 }
 
 .drink {
 	color: #820707;
 	opacity: .5;
+}
+
+#pirate-happy, #pirate-sad {
+	margin-right: 20px;
+}
+
+label[for="submit"] {
+	margin: 47%;
 }
 
