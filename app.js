@@ -135,6 +135,7 @@ Bartender.prototype.takeOrder = function() {
 
 }
 
+
 var bartender = new Bartender();
 bartender.askQuestions();
 bartender.takeOrder();
